@@ -43,3 +43,4 @@ https://jsonplaceholder.typicode.com/
 - https://nodejs.org/de/blog/uncategorized/10-lts-to-12-lts/
 - https://medium.com/@eferhatg/create-react-app-continuous-integration-config-with-circleci-and-aws-2b0238cde169
 - https://www.robinwieruch.de/react-eslint-webpack-babel
+- https://hackernoon.com/structuring-projects-and-naming-components-in-react-1261b6e18d76
