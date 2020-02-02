@@ -2,9 +2,11 @@
   "name": "awesome-blog",
   "version": "1.0.0",
   "description": "There's no better place to read awesome content 🚀",
+  "private": true,
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint src/**/*.js"
   },
   "repository": {
     "type": "git",
@@ -23,7 +25,16 @@
     "react-redux": "^7.1.3",
     "react-router-dom": "^5.1.2",
     "react-router-redux": "^4.0.8",
-    "redux": "^4.0.5",
-    "webpack": "^4.41.5"
+    "redux": "^4.0.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-react": "^7.8.3",
+    "babel-loader": "^8.0.6",
+    "eslint": "^6.8.0",
+    "eslint-config": "^0.3.0",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
   }
 }
