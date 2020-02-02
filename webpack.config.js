@@ -16,16 +16,20 @@ module.exports = {
       {
         test: /\.m?js$/,
         exclude: /(node_modules|bower_components)/,
-        use: 'babel-loader',
-        options: {
-          presets: ['@babel/preset-env'],
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+          },
         },
       },
       {
         test: /\.(html)$/,
-        use: 'html-loader',
-        options: {
-          attrs: [':data-src'],
+        use: {
+          loader: 'html-loader',
+          options: {
+            attrs: [':data-src'],
+          },
         },
       },
     ],
