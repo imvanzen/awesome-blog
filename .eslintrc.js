@@ -7,8 +7,9 @@ module.exports = {
   },
   extends: [
     'plugin:react/recommended',
+    'plugin:jest/recommended',
     'airbnb',
-    "webpack",
+    'webpack',
   ],
   globals: {
     Atomics: 'readonly',
@@ -24,6 +25,7 @@ module.exports = {
   plugins: [
     'react',
     'jest',
+    'enzyme',
   ],
   rules: {
     'react/jsx-filename-extension': [1, {'extensions': ['.js', '.jsx']}],
