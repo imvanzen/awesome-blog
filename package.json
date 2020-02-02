@@ -1,0 +1,20 @@
+{
+  "name": "awesome-blog",
+  "version": "1.0.0",
+  "description": "There's no better place to read awesome content 🚀",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imvanzen/awesome-blog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/imvanzen/awesome-blog/issues"
+  },
+  "homepage": "https://github.com/imvanzen/awesome-blog#readme"
+}
