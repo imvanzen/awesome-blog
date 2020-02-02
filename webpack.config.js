@@ -32,6 +32,22 @@ module.exports = {
           },
         },
       },
+      {
+        test: /\.css$/i,
+        use: [
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+              modules: true,
+              localsConvention: 'camelCase',
+            },
+          },
+        ],
+      },
     ],
   },
   devServer: {

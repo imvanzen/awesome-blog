@@ -50,4 +50,4 @@ https://jsonplaceholder.typicode.com/
 - https://medium.com/@eferhatg/create-react-app-continuous-integration-config-with-circleci-and-aws-2b0238cde169
 - https://www.robinwieruch.de/react-eslint-webpack-babel
 - https://hackernoon.com/structuring-projects-and-naming-components-in-react-1261b6e18d76
-- https://circleci.com/blog/build-a-ci-powered-restful-api-with-laravel/
+- https://blog.pusher.com/css-modules-react/
