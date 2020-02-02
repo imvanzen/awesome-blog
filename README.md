@@ -11,10 +11,10 @@ All actions are documented on [Trello](https://trello.com/b/jbEpUYgp/awesome-blo
 !!To be determined!!
 
 ### Additional objectives
-- [ ] JS good practices
-- [ ] Tests (Jest)
-- [ ] Styling libraries prohibited (Material, Bootstrap)
-- [ ] Bootstraps prohibitet (create-react-app)
+- [x] JS good practices
+- [x] Tests (Jest)
+- [x] Styling libraries prohibited (Material, Bootstrap)
+- [x] Bootstraps prohibitet (create-react-app)
 
 ## Development
 Web appliaction based on following libraries
@@ -24,9 +24,15 @@ Web appliaction based on following libraries
 - [CSS Modules](https://github.com/css-modules/css-modules)
 - [ES6+](http://es6-features.org/)
 
+### Requirements
+- nodejs >= v12.14.1
+- yarn >= v1.21.1
+
 ### Commands
 - `$ yarn start` Run dev server
 - `$ yarn test` Run tests
+- `$ yarn test:watch` Run interactive tests
+- `$ yarn test:coverage` Run tests with `--coverage` and `--colors` flag set
 - `$ yarn lint` Run code linter
 
 ### API
@@ -44,3 +50,4 @@ https://jsonplaceholder.typicode.com/
 - https://medium.com/@eferhatg/create-react-app-continuous-integration-config-with-circleci-and-aws-2b0238cde169
 - https://www.robinwieruch.de/react-eslint-webpack-babel
 - https://hackernoon.com/structuring-projects-and-naming-components-in-react-1261b6e18d76
+- https://circleci.com/blog/build-a-ci-powered-restful-api-with-laravel/
