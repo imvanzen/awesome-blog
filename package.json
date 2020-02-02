@@ -16,5 +16,14 @@
   "bugs": {
     "url": "https://github.com/imvanzen/awesome-blog/issues"
   },
-  "homepage": "https://github.com/imvanzen/awesome-blog#readme"
+  "homepage": "https://github.com/imvanzen/awesome-blog#readme",
+  "dependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-redux": "^7.1.3",
+    "react-router-dom": "^5.1.2",
+    "react-router-redux": "^4.0.8",
+    "redux": "^4.0.5",
+    "webpack": "^4.41.5"
+  }
 }
