@@ -1,11 +1,15 @@
 import React from 'react';
+import { Route, Router, Switch } from 'react-router';
+import { Home, NotFound } from './components/pages';
 
 function App() {
   return (
-    <div>
-      <h1>Awesome blog start development</h1>
-      <div>Another interesting content</div>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/" component={Home} />
+        <Route component={NotFound} />
+      </Switch>
+    </Router>
   );
 }
 
