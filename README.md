@@ -25,12 +25,12 @@ Web appliaction based on following libraries
 - [ES6+](http://es6-features.org/)
 
 ### Commands
-- `$ yarn start` Run dev server 
+- `$ yarn start` Run dev server
 - `$ yarn test` Run tests
 - `$ yarn lint` Run code linter
 
 ### API
-Application uses this API of choice 
+Application uses this API of choice
 https://jsonplaceholder.typicode.com/
 
 ## Library
