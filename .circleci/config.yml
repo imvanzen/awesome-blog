@@ -28,7 +28,7 @@ jobs:
 
 # Orchestrate or schedule a set of jobs
 workflows:
-  version: 1
+  version: 2
   # Name the workflow "build"
   build:
     # Run the build job in its own container
