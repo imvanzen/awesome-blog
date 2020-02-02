@@ -34,9 +34,12 @@ Application uses this API of choice
 https://jsonplaceholder.typicode.com/
 
 ## Library
-https://www.digite.com/kanban/what-is-kanban/
-https://www.freecodecamp.org/news/make-your-code-cleaner-shorter-and-easier-to-read-es6-tips-and-tricks-afd4ce25977c/
-https://www.vikingcodeschool.com/falling-in-love-with-javascript/introduction-to-es6-tips-and-best-practices
-https://css-tricks.com/css-modules-part-1-need/
-https://flaviocopes.com/es6/
-https://dev.to/godcrampy/es6-for-loops-best-practices-4c86
+- https://www.digite.com/kanban/what-is-kanban/
+- https://www.freecodecamp.org/news/make-your-code-cleaner-shorter-and-easier-to-read-es6-tips-and-tricks-afd4ce25977c/
+- https://www.vikingcodeschool.com/falling-in-love-with-javascript/introduction-to-es6-tips-and-best-practices
+- https://css-tricks.com/css-modules-part-1-need/
+- https://flaviocopes.com/es6/
+- https://dev.to/godcrampy/es6-for-loops-best-practices-4c86
+- https://nodejs.org/de/blog/uncategorized/10-lts-to-12-lts/
+- https://medium.com/@eferhatg/create-react-app-continuous-integration-config-with-circleci-and-aws-2b0238cde169
+- https://www.robinwieruch.de/react-eslint-webpack-babel
