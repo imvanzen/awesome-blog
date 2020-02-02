@@ -21,7 +21,7 @@ Web appliaction based on following libraries
 - [ReactJs](https://reactjs.org/docs/getting-started.html)
 - [Redux](https://redux.js.org/introduction/getting-started/)
 - [Webpack](https://webpack.js.org/guides/getting-started/)
-- [CSS Modules](https://github.com/gajus/react-css-modules)
+- [CSS Modules](https://github.com/css-modules/css-modules)
 - [ES6+](http://es6-features.org/)
 
 ### Commands
