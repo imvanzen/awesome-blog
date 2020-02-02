@@ -6,15 +6,32 @@ defaults: &defaults
   docker:
     - image: circleci/node:12.14.1
 
-# Use a package of configuration called an orb.
-orbs:
-  # Declare a dependency on the welcome-orb
-  welcome: circleci/welcome-orb@0.4.1
+# Configure jobs which use default node docker image
+jobs:
+  build:
+    <<: *defaults
+    description: "Run linter and cache node modules"
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: Install root dependencies
+          command: yarn install
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+      - run:
+          name: ESLint
+          command: yarn lint
 
 # Orchestrate or schedule a set of jobs
 workflows:
-  # Name the workflow "welcome"
-  welcome:
-    # Run the welcome/run job in its own container
+  version: 1
+  # Name the workflow "build"
+  build:
+    # Run the build job in its own container
     jobs:
-      - welcome/run
+      - build
+
