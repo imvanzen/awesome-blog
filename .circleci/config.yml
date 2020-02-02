@@ -10,7 +10,7 @@ defaults: &defaults
 jobs:
   build:
     <<: *defaults
-    description: "Run linter and cache node modules"
+    description: "Cache node modules"
     steps:
       - checkout
       - restore_cache:
@@ -22,9 +22,27 @@ jobs:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
             - node_modules
+  lint:
+    <<: *defaults
+    description: "Run linter"
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
       - run:
-          name: ESLint
+          name: Run eslint
           command: yarn lint
+  test:
+    <<: *defaults
+    description: "Run tests"
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: Run tests
+          command: yarn test
+
 
 # Orchestrate or schedule a set of jobs
 workflows:
@@ -34,4 +52,9 @@ workflows:
     # Run the build job in its own container
     jobs:
       - build
-
+      - lint:
+          requires:
+            - build
+      - test:
+          requires:
+            - build
