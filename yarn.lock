@@ -1968,6 +1968,11 @@ escope@^3.6.0:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
+eslint-config-webpack@^1.2.5:
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/eslint-config-webpack/-/eslint-config-webpack-1.2.5.tgz#1705686433ebc1a80030cb307d1c53e3e8146e76"
+  integrity sha512-dEDG73rOZ5QAZRACRtxkvVHH7aduQPT6EfF33WbJEp7T8I+HKRA9pph6F/XFCtPGw9YOX7KSipT9q/p+E2ZOKw==
+
 eslint-config@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/eslint-config/-/eslint-config-0.3.0.tgz#d1cb5f1abb37eef302f5b613ebab3b1cf509bce1"
