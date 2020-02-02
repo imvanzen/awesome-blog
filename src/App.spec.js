@@ -1,11 +1,11 @@
 import React from 'react';
-import { MemoryRouter } from 'react-router';
+import { MemoryRouter } from 'react-router-dom';
 import { mount } from 'enzyme';
 import App from './App';
 import { Home, NotFound } from './components/pages';
 
 describe('App', () => {
-  test('invalid path should redirect to 404', () => {
+  test('invalid path should render not found page', () => {
     const wrapper = mount(
       <MemoryRouter initialEntries={['/no-existing-page']}>
         <App />
@@ -15,7 +15,7 @@ describe('App', () => {
     expect(wrapper.find(NotFound)).toHaveLength(1);
   });
 
-  test('valid path should not redirect to 404', () => {
+  test('valid path should render home page', () => {
     const wrapper = mount(
       <MemoryRouter initialEntries={['/']}>
         <App />

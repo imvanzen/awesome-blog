@@ -1,15 +1,15 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import { Home, NotFound } from './components/pages';
 
 function App() {
   return (
-    <Router>
-      <div>
+    <div className="App">
+      <Switch>
         <Route exact path="/" component={Home} />
-        <Route component={NotFound} />
-      </div>
-    </Router>
+        <Route path="*" component={NotFound} />
+      </Switch>
+    </div>
   );
 }
 
