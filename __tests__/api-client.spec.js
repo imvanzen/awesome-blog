@@ -12,7 +12,8 @@ describe('Api Client', () => {
     body: 'Lorem ipsum',
   };
   const testPostsList = [
-    testSinglePost, {
+    testSinglePost,
+    {
       userId: '2',
       id: '456',
       title: 'Ipsum lorem',
