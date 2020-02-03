@@ -7,13 +7,20 @@ jest.mock('axios');
 describe('Api Client', () => {
   const testPostsList = [
     {
+      userId: '1',
       id: '123',
       title: 'Lorem ipsum',
-      content: 'Lorem ipsum',
+      body: 'Lorem ipsum',
     }, {
+      userId: '2',
       id: '456',
       title: 'Ipsum lorem',
-      content: 'Ipsum lorem',
+      body: 'Ipsum lorem',
+    }, {
+      userId: '3',
+      id: '918',
+      title: 'Dev This',
+      body: 'My body!',
     },
   ];
 
