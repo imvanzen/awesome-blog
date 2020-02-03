@@ -17,19 +17,20 @@ describe('Api Client', () => {
     },
   ];
 
-  it('Get posts', () => {
+  test('Should get posts', () => {
+
     return apiClient.getPosts().then(posts => expect(posts).toEqual(testPostsList));
   });
 
-  it('Get post by ID', () => {
+  test('Should get post by ID', () => {
 
   });
 
-  it('Get comments for post by post id', () => {
+  test('Should get get comments for post by post id', () => {
 
   });
 
-  it('Create comment for post by post id', () => {
+  test('Should create comment for post by post id', () => {
 
   });
 });
