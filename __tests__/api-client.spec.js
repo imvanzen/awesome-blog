@@ -5,13 +5,14 @@ import apiClient from '../src/api-client';
 jest.mock('axios');
 
 describe('Api Client', () => {
+  const testSinglePost = {
+    userId: '1',
+    id: '123',
+    title: 'Lorem ipsum',
+    body: 'Lorem ipsum',
+  };
   const testPostsList = [
-    {
-      userId: '1',
-      id: '123',
-      title: 'Lorem ipsum',
-      body: 'Lorem ipsum',
-    }, {
+    testSinglePost, {
       userId: '2',
       id: '456',
       title: 'Ipsum lorem',
