@@ -1,4 +1,8 @@
+// eslint-disable-next-line no-unused-vars
+import axios from 'axios';
 import apiClient from '../src/api-client';
+
+jest.mock('axios');
 
 describe('Api Client', () => {
   const testPostsList = [
