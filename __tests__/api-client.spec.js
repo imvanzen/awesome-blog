@@ -62,7 +62,9 @@ describe('Api Client', () => {
   });
 
   test('Should get get comments for post by post id', () => {
+    axios.get.mockResolvedValueOnce(testComments);
 
+    return apiClient.getComments(testSinglePost.id).then(comments => expect(comments).toEqual(testComments));
   });
 
   test('Should create comment for post by post id', () => {
