@@ -25,6 +25,29 @@ describe('Api Client', () => {
       body: 'My body!',
     },
   ];
+  const testComments = [
+    {
+      postId: testSinglePost.id,
+      id: 1,
+      name: 'Joe Doe',
+      email: 'joe.doe@example.com',
+      body: 'laudantium enim quasi est quidem ma',
+    },
+    {
+      postId: testSinglePost.id,
+      id: 2,
+      name: 'Tony Stark',
+      email: 'tony.stark@blabengers.com',
+      body: 'My rockets',
+    },
+    {
+      postId: testSinglePost.id,
+      id: 3,
+      name: 'Elon Musk',
+      email: 'elon.musk@boring.com',
+      body: 'NO! My rockets!',
+    },
+  ];
 
   test('Should get posts', () => {
     axios.get.mockResolvedValueOnce(testPostsList);
