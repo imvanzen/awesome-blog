@@ -32,7 +32,9 @@ describe('Api Client', () => {
   });
 
   test('Should get post by ID', () => {
+    axios.get.mockResolvedValueOnce(testSinglePost);
 
+    return apiClient.getPost(testSinglePost.id).then(post => expect(post).toEqual(testSinglePost));
   });
 
   test('Should get get comments for post by post id', () => {
