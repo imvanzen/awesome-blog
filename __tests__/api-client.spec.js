@@ -25,7 +25,7 @@ describe('Api Client', () => {
   ];
 
   test('Should get posts', () => {
-    axios.get.mockResolvedValue(testPostsList);
+    axios.get.mockResolvedValueOnce(testPostsList);
 
     return apiClient.getPosts().then(posts => expect(posts).toEqual(testPostsList));
   });
