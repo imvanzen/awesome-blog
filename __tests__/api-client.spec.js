@@ -14,7 +14,7 @@ describe('Api Client', () => {
   ];
 
   it('Get posts', () => {
-
+    return apiClient.getPosts().then(posts => expect(posts).toEqual(testPostsList));
   });
 
   it('Get post by ID', () => {
