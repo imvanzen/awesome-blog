@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/imvanzen/awesome-blog#readme",
   "dependencies": {
+    "axios": "^0.19.2",
     "connected-react-router": "^6.6.1",
     "history": "^4.10.1",
     "prop-types": "^15.7.2",
