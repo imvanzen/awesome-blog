@@ -51,3 +51,7 @@ https://jsonplaceholder.typicode.com/
 - https://www.robinwieruch.de/react-eslint-webpack-babel
 - https://hackernoon.com/structuring-projects-and-naming-components-in-react-1261b6e18d76
 - https://blog.pusher.com/css-modules-react/
+- https://appdividend.com/2018/06/15/react-redux-axios-tutorial-example/
+
+## Issues
+- async/await with babel https://github.com/babel/babel/issues/8829
