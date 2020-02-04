@@ -10,7 +10,7 @@ const NoResults = () => (
 const PostsList = ({ posts }) => (
   <div className={styles.PostsList}>
     {posts.length > 0 ? posts.map(({ id, title, body }) => (
-      <Post key={id} title={title} body={body} />
+      <Post key={id} id={id} title={title} body={body} />
     )) : <NoResults />}
   </div>
 );
