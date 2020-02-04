@@ -11,8 +11,8 @@ const Comments = ({ postId, getPostComments }) => {
 
   useEffect(() => {
     if (postId) {
-      getPostComments(postId).then(({ comments }) => {
-        setPostComments(comments);
+      getPostComments(postId).then((result) => {
+        setPostComments(result.comments);
       });
     }
   }, [postId]);
@@ -20,13 +20,13 @@ const Comments = ({ postId, getPostComments }) => {
   return (
     <div className={styles.Comments}>
       <AddCommentForm />
-      <CommentsList comentsList={comments} />
+      <CommentsList comments={comments} />
     </div>
   );
 };
 
 Comments.propTypes = {
-  postId: PropTypes.number.isRequired,
+  postId: PropTypes.string.isRequired,
   getPostComments: PropTypes.func.isRequired,
 };
 
