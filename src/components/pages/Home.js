@@ -13,7 +13,7 @@ const Home = ({ getPosts }) => {
     getPosts().then(({ posts }) => {
       setPosts(posts);
     });
-  }, [posts]);
+  }, []);
 
   return (
     <div className='Home'>
