@@ -6,7 +6,7 @@ const Navigation = () => (
   <nav className={styles.Navigation}>
     <HashRouter>
       <Link to="/">
-        <span className={styles.NavigationLogo}>Awesome Blog</span>
+        <span className={styles.Navigation_Logo}>Awesome Blog</span>
       </Link>
     </HashRouter>
   </nav>

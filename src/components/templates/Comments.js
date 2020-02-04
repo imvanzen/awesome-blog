@@ -19,7 +19,9 @@ const Comments = ({ postId, getPostComments, createComment }) => {
 
   return (
     <div className={styles.Comments}>
+      <h2>Leave comment</h2>
       <AddCommentForm handlerSubmit={comment => createComment(postId, comment)} />
+      <h2>Comments</h2>
       <CommentsList comments={comments} />
     </div>
   );

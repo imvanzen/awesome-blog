@@ -1,7 +1,9 @@
 /* Post.css */
 
 .Post {
-
+  padding: 1em;
+  border-bottom: 1px solid #CCCCCC;
+  margin-bottom: 1em;
 }
 
 .Post_Bookmark {

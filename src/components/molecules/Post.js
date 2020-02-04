@@ -7,9 +7,9 @@ import styles from './Post.css';
 const Post = ({ post: { title, body, id }, type }) => (
   <article className={styles.Post}>
     <h2>{ title }</h2>
-    <p>{ body }</p>
-    { type === 'short' && (<HashRouter><Link to={`/posts/${id}`}>Read more</Link></HashRouter>) }
     { type === 'full' && (<Bookmark href={window.location.href} title={title} />) }
+    <p>{ body }</p>
+    { type === 'short' && (<HashRouter><Link to={`/posts/${id}`}>Read more &raquo;</Link></HashRouter>) }
   </article>
 );
 

@@ -3,7 +3,11 @@
 }
 
 body {
-  font: normal 12px sans-serif;
+  font: normal 15px sans-serif;
   margin: 0;
   padding: 0;
+}
+
+a {
+  text-decoration: none;
 }
