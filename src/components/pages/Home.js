@@ -19,7 +19,7 @@ Home.propTypes = {
 
 const mapStateToProps = (state) => {
   return {
-    posts: state.posts.list,
+    posts: state.post.list,
   };
 };
 
