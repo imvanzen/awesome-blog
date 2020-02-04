@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import AddCommentForm from '../organisms/CommentForm';
 import CommentsList from '../organisms/CommentsList';
-import { fetchPostComments } from '../../actions';
+import { fetchPostComments, createPostComment } from '../../actions';
 import styles from './Comments.css';
 
-const Comments = ({ postId, getPostComments, createPostComment }) => {
+const Comments = ({ postId, getPostComments, createComment }) => {
   const [comments, setPostComments] = useState([]);
 
   useEffect(() => {
@@ -19,7 +19,7 @@ const Comments = ({ postId, getPostComments, createPostComment }) => {
 
   return (
     <div className={styles.Comments}>
-      <AddCommentForm handlerSubmit={createPostComment} />
+      <AddCommentForm handlerSubmit={comment => createPostComment(postId, comment)} />
       <CommentsList comments={comments} />
     </div>
   );
@@ -28,12 +28,13 @@ const Comments = ({ postId, getPostComments, createPostComment }) => {
 Comments.propTypes = {
   postId: PropTypes.string.isRequired,
   getPostComments: PropTypes.func.isRequired,
+  createComment: PropTypes.func.isRequired,
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
     getPostComments: postId => dispatch(fetchPostComments(postId)),
-    createPostComment: comment => postId => dispatch(createPostComment(postId, comment))
+    createComment: (postId, comment) => dispatch(createPostComment(postId, comment)),
   };
 };
 

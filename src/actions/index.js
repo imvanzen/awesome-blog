@@ -22,10 +22,10 @@ export const fetchPostCommentsSuccess = (comments) => {
   };
 };
 
-export const createPostCommentsSuccess = (comments) => {
+export const createPostCommentsSuccess = (comment) => {
   return {
     type: CREATE_POST_COMMENT,
-    comments,
+    comment,
   };
 };
 
@@ -48,7 +48,7 @@ export const fetchPostComments = postId => dispatch => getPostComments(postId)
   });
 
 export const createPostComment = (postId, comment) => dispatch => createPostComment(postId, comment)
-  .then(comments => dispatch(createPostCommentsSuccess(comments)))
+  .then(comment => dispatch(createPostCommentsSuccess(comment)))
   .catch((error) => {
     throw (error);
   });
