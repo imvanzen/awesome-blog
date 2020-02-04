@@ -1,4 +1,28 @@
 /* CommentForm.css */
 .CommentForm {
+  border-bottom: 1px solid #CCCCCC;
+}
+
+.CommentForm_Body {
+  width: 20vw;
+  min-width: 200px;
+  height: 100px;
+  max-height: 300px;
+}
+
+.CommentForm_Signature {
 
 }
+
+.CommentForm_Signature_Label {
+
+}
+
+.CommentForm_Signature_Label {
+
+}
+
+.CommentForm_Submit {
+
+}
+
