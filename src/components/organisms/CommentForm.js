@@ -20,7 +20,13 @@ const CommentForm = ({ handlerSubmit }) => {
 
   const onSubmit = (event) => {
     event.preventDefault();
-    return handlerSubmit(comment);
+    return handlerSubmit(comment)
+      .then(() => {
+        resetCommentForm();
+      })
+      .catch(() => {
+        alert('Cannot add comment');
+      });
   };
 
   return (
