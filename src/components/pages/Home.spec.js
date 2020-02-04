@@ -11,7 +11,9 @@ describe('Home Page', () => {
     expect(wrapper.find(Navigation)).toHaveLength(1);
   });
 
-
+  test('should render PostsList', () => {
+    expect(wrapper.find(PostsList)).toHaveLength(1);
+  });
 
   test('should render Footer', () => {
     expect(wrapper.find(Footer)).toHaveLength(1);
