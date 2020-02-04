@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Footer from '../templates/Footer';
 import Navigation from '../templates/Navigation';
+import Comments from '../templates/Comments';
 import Post from '../molecules/Post';
 import { fetchPost } from '../../actions';
 
@@ -21,6 +22,7 @@ const PostDetails = ({ getPost, match: { params: { id } } }) => {
     <div className='PostDetails'>
       <Navigation />
       {post && <Post post={post} />}
+      <Comments postId={id} />
       <Footer />
     </div>
   );
