@@ -6,10 +6,8 @@ import Navigation from '../templates/Navigation';
 import Post from '../molecules/Post';
 import { fetchPost } from '../../actions';
 
-const PostDetails = ({ id, getPost }) => {
-  const [post, setPost] = useState({
-    id: null, title: null, body: null,
-  });
+const PostDetails = ({ getPost, match: { params: { id } } }) => {
+  const [post, setPost] = useState(null);
 
   useEffect(() => {
     if (id) {
@@ -22,22 +20,19 @@ const PostDetails = ({ id, getPost }) => {
   return (
     <div className='PostDetails'>
       <Navigation />
-      <Post post={post} />
+      {post && <Post post={post} />}
       <Footer />
     </div>
   );
 };
 
 PostDetails.propTypes = {
-  id: PropTypes.number.isRequired,
   getPost: PropTypes.func.isRequired,
-};
-
-const mapStateToProps = (state) => {
-  console.log(state);
-  return {
-    id: 1,
-  };
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      id: PropTypes.string.isRequired,
+    }),
+  }).isRequired,
 };
 
 const mapDispatchToProps = (dispatch) => {
@@ -47,6 +42,6 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 export default connect(
-  mapStateToProps,
+  null,
   mapDispatchToProps,
 )(PostDetails);

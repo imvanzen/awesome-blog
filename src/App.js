@@ -8,7 +8,7 @@ function App() {
     <div className={styles.App}>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/:postId" component={PostDetails} />
+        <Route exact path="/posts/:id" component={PostDetails} />
         <Route path="*" component={NotFound} />
       </Switch>
     </div>
