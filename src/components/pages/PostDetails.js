@@ -42,7 +42,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    getPosts: id => dispatch(fetchPost(id)),
+    getPost: id => dispatch(fetchPost(id)),
   };
 };
 
