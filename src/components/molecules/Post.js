@@ -1,13 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { HashRouter, Link } from 'react-router-dom';
 import styles from './Post.css';
 
 const Post = ({ post: { title, body, id } }) => (
   <article className={styles.Post}>
     <h2>{ title }</h2>
     <p>{ body }</p>
-    <Link to={`/posts/${id}`}>Czytaj więcej</Link>
+    <HashRouter>
+      <Link to={`/posts/${id}`}>Czytaj więcej</Link>
+    </HashRouter>
   </article>
 );
 
