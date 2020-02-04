@@ -50,13 +50,13 @@ describe('Api Client', () => {
   ];
 
   test('Should get posts', () => {
-    axios.get.mockResolvedValueOnce(testPostsList);
+    axios.get.mockResolvedValueOnce({ data: testPostsList });
 
     return getPosts().then(posts => expect(posts).toEqual(testPostsList));
   });
 
   test('Should get post by ID', () => {
-    axios.get.mockResolvedValueOnce(testSinglePost);
+    axios.get.mockResolvedValueOnce({ data: testSinglePost });
 
     return getPosts(testSinglePost.id).then(post => expect(post).toEqual(testSinglePost));
   });
