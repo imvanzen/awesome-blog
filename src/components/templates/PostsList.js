@@ -16,7 +16,13 @@ const PostsList = ({ posts }) => (
 );
 
 PostsList.propTypes = {
-  posts: PropTypes.isRequired,
+  posts: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number,
+      title: PropTypes.string,
+      body: PropTypes.string,
+    }),
+  ).isRequired,
 };
 
 export default PostsList;

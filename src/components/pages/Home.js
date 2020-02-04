@@ -1,28 +1,40 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Navigation from '../templates/Navigation';
 import Footer from '../templates/Footer';
 import PostsList from '../templates/PostsList';
+import { fetchAllPosts } from '../../actions';
 
-const Home = ({ posts }) => (
-  <div className='Home'>
-    <Navigation />
-    <PostsList posts={posts} />
-    <Footer />
-  </div>
-);
+const Home = ({ getPosts }) => {
+  const [posts, setPosts] = useState([]);
 
-Home.propTypes = {
-  posts: PropTypes.isRequired,
+  useEffect(() => {
+    getPosts().then(({ posts }) => {
+      setPosts(posts);
+    });
+  }, [posts]);
+
+  return (
+    <div className='Home'>
+      <Navigation />
+      <PostsList posts={posts} />
+      <Footer />
+    </div>
+  );
 };
 
-const mapStateToProps = (state) => {
+Home.propTypes = {
+  getPosts: PropTypes.func.isRequired,
+};
+
+const mapDispatchToProps = (dispatch) => {
   return {
-    posts: state.post.list,
+    getPosts: () => dispatch(fetchAllPosts()),
   };
 };
 
 export default connect(
-  mapStateToProps,
+  null,
+  mapDispatchToProps,
 )(Home);

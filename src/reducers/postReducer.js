@@ -12,7 +12,7 @@ const initialState = {
 export default function postReducer(state = initialState, action) {
   switch (action.type) {
     case FETCH_ALL_POSTS:
-      return Object.assign({}, ...state, { list: action.posts });
+      return { ...state, list: action.posts };
     default:
       return state;
   }
