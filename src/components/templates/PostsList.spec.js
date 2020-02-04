@@ -5,19 +5,19 @@ import PostsList from './PostsList';
 
 const testPostsList = [
   {
-    userId: '1',
-    id: '123',
+    userId: 1,
+    id: 123,
     title: 'Lorem ipsum',
     body: 'Lorem ipsum',
   },
   {
-    userId: '2',
-    id: '456',
+    userId: 2,
+    id: 456,
     title: 'Ipsum lorem',
     body: 'Ipsum lorem',
   }, {
-    userId: '3',
-    id: '918',
+    userId: 3,
+    id: 918,
     title: 'Dev This',
     body: 'My body!',
   },
