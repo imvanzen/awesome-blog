@@ -1,4 +1,4 @@
-import { getPost, getPostComments, getPosts } from '../api-client';
+import { getPost, getPostComments, getPosts, postComment } from '../api-client';
 import { FETCH_ALL_POSTS, FETCH_POST, FETCH_POST_COMMENTS, CREATE_POST_COMMENT } from './types';
 
 export const fetchAllPostsSuccess = (posts) => {
@@ -22,7 +22,7 @@ export const fetchPostCommentsSuccess = (comments) => {
   };
 };
 
-export const createPostCommentsSuccess = (comment) => {
+export const createCommentsSuccess = (comment) => {
   return {
     type: CREATE_POST_COMMENT,
     comment,
@@ -47,8 +47,8 @@ export const fetchPostComments = postId => dispatch => getPostComments(postId)
     throw (error);
   });
 
-export const createPostComment = (postId, comment) => dispatch => createPostComment(postId, comment)
-  .then(comment => dispatch(createPostCommentsSuccess(comment)))
+export const createPostComment = (postId, comment) => dispatch => postComment(postId, comment)
+  .then(comment => dispatch(createCommentsSuccess(comment)))
   .catch((error) => {
     throw (error);
   });

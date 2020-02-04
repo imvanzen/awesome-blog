@@ -19,7 +19,7 @@ const Comments = ({ postId, getPostComments, createComment }) => {
 
   return (
     <div className={styles.Comments}>
-      <AddCommentForm handlerSubmit={comment => createPostComment(postId, comment)} />
+      <AddCommentForm handlerSubmit={comment => createComment(postId, comment)} />
       <CommentsList comments={comments} />
     </div>
   );
