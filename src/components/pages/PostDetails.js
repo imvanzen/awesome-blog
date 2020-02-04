@@ -17,7 +17,7 @@ const PostDetails = ({ id, getPost }) => {
         setPost(post);
       });
     }
-  }, [id, post]);
+  }, [id]);
 
   return (
     <div className='PostDetails'>
