@@ -6,7 +6,7 @@ import CommentsList from '../organisms/CommentsList';
 import { fetchPostComments } from '../../actions';
 import styles from './Comments.css';
 
-const Comments = ({ postId, getPostComments }) => {
+const Comments = ({ postId, getPostComments, createPostComment }) => {
   const [comments, setPostComments] = useState([]);
 
   useEffect(() => {
@@ -19,7 +19,7 @@ const Comments = ({ postId, getPostComments }) => {
 
   return (
     <div className={styles.Comments}>
-      <AddCommentForm />
+      <AddCommentForm handlerSubmit={createPostComment} />
       <CommentsList comments={comments} />
     </div>
   );
@@ -33,6 +33,7 @@ Comments.propTypes = {
 const mapDispatchToProps = (dispatch) => {
   return {
     getPostComments: postId => dispatch(fetchPostComments(postId)),
+    createPostComment: comment => postId => dispatch(createPostComment(postId, comment))
   };
 };
 
