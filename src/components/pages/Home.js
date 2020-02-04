@@ -1,8 +1,12 @@
 import React from 'react';
+import Navigation from '../templates/Navigation';
+import Footer from '../templates/Footer';
 
 const Home = () => (
-  <div>
-    <h1>Home</h1>
+  <div className='Home'>
+    <Navigation />
+
+    <Footer />
   </div>
 );
 
