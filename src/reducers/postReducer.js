@@ -1,9 +1,18 @@
 import { FETCH_ALL_POSTS } from '../actions/types';
 
-export default function postReducer(state = [], action) {
+const initialState = {
+  list: [],
+  details: {
+    id: null,
+    title: null,
+    body: null,
+  },
+};
+
+export default function postReducer(state = initialState, action) {
   switch (action.type) {
     case FETCH_ALL_POSTS:
-      return action.posts;
+      return Object.assign({}, ...state, { list: action.posts });
     default:
       return state;
   }
