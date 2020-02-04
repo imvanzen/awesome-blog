@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
+import Post from '../molecules/Post';
 import styles from './PostsList.css';
 
 const NoResults = () => (
@@ -9,8 +9,8 @@ const NoResults = () => (
 
 const PostsList = ({ posts }) => (
   <div className={styles.PostsList}>
-    {posts.length > 0 ? posts.map(post => (
-      <div key={post.id}>{post.title}</div>
+    {posts.length > 0 ? posts.map(({ id, title, body }) => (
+      <Post key={id} title={title} body={body} />
     )) : <NoResults />}
   </div>
 );
@@ -19,12 +19,4 @@ PostsList.propTypes = {
   posts: PropTypes.isRequired,
 };
 
-const mapStateToProps = (state) => {
-  return {
-    posts: state.posts,
-  };
-};
-
-export default connect(
-  mapStateToProps,
-)(PostsList);
+export default PostsList;
