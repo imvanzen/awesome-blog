@@ -9,7 +9,7 @@ const NoComments = () => (
 
 const CommentsList = ({ comments }) => (
   <div className='CommentsList'>
-    { comments.length > 0 ? comments.map(comment => <Comment comment={comment} />) : <NoComments /> }
+    { comments.length > 0 ? comments.map(comment => <Comment key={comment.id} comment={comment} />) : <NoComments /> }
   </div>
 );
 
@@ -17,7 +17,8 @@ CommentsList.propTypes = {
   comments: PropTypes.arrayOf(
     PropTypes.shape({
       body: PropTypes.string.isRequired,
-      author: PropTypes.string.isRequired,
+      email: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
     }),
   ).isRequired,
 };
