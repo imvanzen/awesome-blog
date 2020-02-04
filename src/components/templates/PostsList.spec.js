@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import PostsList from './PostsList';
 import Post from '../molecules/Post';
+import PostsList from './PostsList';
 
 const testPostsList = [
   {
