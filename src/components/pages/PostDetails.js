@@ -21,7 +21,7 @@ const PostDetails = ({ getPost, match: { params: { id } } }) => {
   return (
     <div className='PostDetails'>
       <Navigation />
-      {post && <Post post={post} />}
+      {post && <Post post={post} type="full" />}
       <Comments postId={id} />
       <Footer />
     </div>
