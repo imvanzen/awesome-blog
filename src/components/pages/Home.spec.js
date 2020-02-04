@@ -5,8 +5,12 @@ import PostsList from '../templates/PostsList';
 import Footer from '../templates/Footer';
 import Home from './Home';
 
+let wrapper;
+
 describe('Home Page', () => {
-  const wrapper = shallow(<Home />);
+  beforeAll(() => {
+    wrapper = shallow(<Home />);
+  });
 
   test('should render Navigation', () => {
     expect(wrapper.find(Navigation)).toHaveLength(1);
