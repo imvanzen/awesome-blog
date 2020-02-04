@@ -14,9 +14,11 @@ const CommentsList = ({ comments }) => (
 );
 
 CommentsList.propTypes = {
-  comments: PropTypes.arrayOf({
-    body: PropTypes.string.isRequired,
-    author: PropTypes.string.isRequired,
-  }).isRequired,
+  comments: PropTypes.arrayOf(
+    PropTypes.shape({
+      body: PropTypes.string.isRequired,
+      author: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
 };
 export default CommentsList;
