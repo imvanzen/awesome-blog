@@ -1,5 +1,5 @@
-import { getPost, getPosts } from '../api-client';
-import { FETCH_ALL_POSTS, FETCH_POST } from './types';
+import { getPost, getPostComments, getPosts } from '../api-client';
+import { FETCH_ALL_POSTS, FETCH_POST, FETCH_POST_COMMENTS } from './types';
 
 export const fetchAllPostsSuccess = (posts) => {
   return {
@@ -15,6 +15,13 @@ export const fetchPostSuccess = (post) => {
   };
 };
 
+export const fetchPostCommentsSuccess = (comments) => {
+  return {
+    type: FETCH_POST_COMMENTS,
+    comments,
+  };
+};
+
 export const fetchAllPosts = () => dispatch => getPosts()
   .then(posts => dispatch(fetchAllPostsSuccess(posts)))
   .catch((error) => {
@@ -23,6 +30,12 @@ export const fetchAllPosts = () => dispatch => getPosts()
 
 export const fetchPost = id => dispatch => getPost(id)
   .then(post => dispatch(fetchPostSuccess(post)))
+  .catch((error) => {
+    throw (error);
+  });
+
+export const fetchPostComments = postId => dispatch => getPostComments(postId)
+  .then(comments => dispatch(fetchPostCommentsSuccess(comments)))
   .catch((error) => {
     throw (error);
   });
